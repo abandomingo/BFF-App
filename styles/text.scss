@@ -1,0 +1,60 @@
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../src/assets/fonts/Cabin/static/Cabin-Regular.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabin-Bold';
+  src: url('../src/assets/fonts/Cabin/static/Cabin-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin Logo {
+  font-size: 28px;
+  font-family: 'Cabin-Bold';
+}
+
+@mixin FontLarge {
+  font-size: 18px;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+
+// Medium Font
+@mixin FontMedium {
+  font-size: 16px;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+
+// Small Font
+@mixin FontSmall {
+  font-size: 12px;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+
+@mixin FontColor($color) {
+  color: $color;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: 'Cabin';
+}
+
+h2 {
+  font-size: 35px;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+

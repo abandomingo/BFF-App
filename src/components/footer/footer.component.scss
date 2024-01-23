@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+
+.Footer {
+  @include BackgroundColor($white-color);
+  padding: 2rem 0;
+
+  &__Logo {
+    @include FlexRowCentered;
+    @include Logo;
+    padding: 0.5rem 0;
+  }
+
+  &__Links {
+    @include FlexRowCentered;
+    @include FlexGap(3rem);
+    @include FontSmall;
+    padding: 0.5rem 0;
+  }
+
+  &__Me {
+    @include FlexRowCentered;
+    @include FlexGap(3rem);
+    @include FontSmall;
+    padding: 0.5rem 0;
+  }
+}
+
