@@ -7,6 +7,8 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { FooterComponent } from '../components/footer/footer.component'; 
 import { BannerComponent } from '../components/banner/banner.component';
 import { HomeComponent } from '../pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContentComponent } from '../pages/content/content.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { HomeComponent } from '../pages/home/home.component';
     FooterComponent,
     BannerComponent,
     HomeComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

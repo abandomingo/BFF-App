@@ -17,11 +17,16 @@
     padding: 0.5rem 0;
   }
 
+  hr {
+    margin: 0.5rem 2rem;
+
+  }
+
   &__Me {
     @include FlexRowCentered;
     @include FlexGap(3rem);
     @include FontSmall;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0 0;
   }
 }
 

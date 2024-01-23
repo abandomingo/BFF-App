@@ -1,0 +1,12 @@
+@import '../../styles.scss';
+
+#Home-Container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
