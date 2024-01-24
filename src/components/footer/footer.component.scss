@@ -28,5 +28,16 @@
     @include FontSmall;
     padding: 0.5rem 0 0 0;
   }
+
+  .Link {
+    @include FontSmall;
+    color: $black-color;
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  onButtonClick() {
+    console.log("Button Works!");
+  }
 }

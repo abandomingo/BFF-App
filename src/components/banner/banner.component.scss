@@ -1,9 +1,0 @@
-@import '../../styles.scss';
-
-.Banner {
-  &__Title {
-    @include FlexRowSpacedEvenly;
-    @include FontMedium;
-
-  }
-}

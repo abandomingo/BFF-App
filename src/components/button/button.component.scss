@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+
+:host {
+  display: block;
+}
+
+.Button {
+  min-width: 80px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  border: none;
+  
+  &__Text {
+    @include FontSmall;
+    font-weight: bold;
+    @include FlexRowCentered;
+    color: $white-color;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}

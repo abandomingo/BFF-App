@@ -19,8 +19,22 @@
   }
 
   &__Right {
-    @include FontLarge;
+    @include FlexRowCentered;
+    @include FlexGap(3rem);
     padding-right: 2rem;
+
+    
   }
 
+  .Link {
+    @include FontSmall;
+    color: $black-color;
+    text-decoration: none;
+
+    :hover {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }

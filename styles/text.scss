@@ -41,18 +41,18 @@
   color: $color;
 }
 
-h1 {
+@mixin FontH1{
   font-size: 48px;
   font-family: 'Cabin';
 }
 
-h2 {
+@mixin FontH2 {
   font-size: 35px;
   font-family: 'Cabin';
   font-weight: 600;
 }
 
-h3 {
+@mixin FontH3 {
   font-size: 20px;
   font-family: 'Cabin';
   font-weight: 600;

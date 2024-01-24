@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Colors } from '../../constants/colors';
+
 
 @Component({
   selector: 'content',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-
+  readonly colors = Colors;
 }

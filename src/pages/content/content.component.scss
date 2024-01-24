@@ -1,18 +1,9 @@
 @import '../../styles.scss';
 
-#a{
-  @include BackgroundColor($white-color);
-
-}
-
-#b{
-  @include BackgroundColor($accent2-color);
-}
-
-#c{
-  @include BackgroundColor($white-color);
-}
-
-#d{
-  @include BackgroundColor($accent1-color);
+.Banner {
+  @include FlexColumnCentered;
+  &__Title {
+    @include FlexColumnCentered;
+    @include FontH2;
+  }
 }

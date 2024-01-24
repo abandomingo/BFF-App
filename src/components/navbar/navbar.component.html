@@ -1,9 +1,13 @@
 <div class="Navbar">
   <div class="Navbar__Left">BFF</div>
   <div class="Navbar__Mid">
-    <div class="Navbar__Mid__Item">About</div>
-    <div class="Navbar__Mid__Item">Features</div>
-    <div class="Navbar__Mid__Item">Github</div>
+    <a class="Link" rel="noopener" href="#Features">Features</a>
+    <a class="Link" rel="noopener" href="#About">About</a>
+    <a class="Link" rel="noopener"  href="#FAQ" >FAQ</a>
+    <a class="Link" href="https://github.com/abandomingo" target="_blank">Github</a>
   </div>
-  <div class="Navbar__Right">Get Started</div>
+  <div class="Navbar__Right">
+    <a class="Link" href="login"> Login </a>
+    <button-chip id="Register" [buttonText]="'Register'" (clickEvent)="onButtonClick()" ></button-chip>
+  </div>
 </div>
