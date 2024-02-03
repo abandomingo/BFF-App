@@ -1,7 +1,43 @@
-<div id="Home-Container">
-  <navbar></navbar>
-  <div id="Content">
-    <content></content>
+<div id="Start" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.WHITE">
+  <div class="Banner__Title" [style.height]="'100px'">
+    Financial Freedom Starts Here
   </div>
-  <footer id="Footer"></footer> 
+  <button-chip [buttonText]="'Start Here'"></button-chip>
+</div>
+<div id="Features" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.ACCENT2">
+  <div class="Banner__Title" [style.height]="'100px'">
+    Powerful Features for Financial Guidance
+  </div>
+</div>
+<div id="About" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.WHITE">
+  <div class="Banner__Title" [style.height]="'100px'">
+    Take Control of Your Finances
+  </div>
+</div>
+<div id="FAQ" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.ACCENT1">
+  <div class="FAQ__Title">
+    <span class="FAQ__Title__Small">FAQ</span>
+
+    <span class="FAQ__Title__Large">Common Questions</span>
+
+    <span class="FAQ__Title__Medium">Here are some of the most common questions that we get</span>
+  </div>
+  <div class="FAQ__Info">
+    <span class="FAQ__Info__Question">How does the website calculate financial suggestions?</span>
+    <span class="FAQ__Info__Answer">The website uses advanced algorithms and formulas to analyze your income, debt, spending habits, and other financial factors to provide personalized suggestions.</span>
+    
+    <span class="FAQ__Info__Question">Is my personal information secure on the website?</span>
+    <span class="FAQ__Info__Answer">Yes, we take the security and privacy of your personal information very seriously. No data is saved within this application and cannot be tracked .</span>
+    
+    <span class="FAQ__Info__Question">Can I trust the financial suggestions provided by the website?
+    </span>
+    <span class="FAQ__Info__Answer">Our website is designed to provide reliable and accurate financial suggestions. However, it's important to note that these suggestions are based on the information you provide. It's always a good idea to consult with a financial advisor or professional for personalized advice.</span>
+    
+    <span class="FAQ__Info__Question">Is the website free to use?</span>
+    <span class="FAQ__Info__Answer">Yes, our website is completely free to use. You can access all the features and calculate financial suggestions without any charges.</span>
+    
+    <span class="FAQ__Info__Question">Can I save my financial data on the website?</span>
+    <span class="FAQ__Info__Answer">Currently, we do not offer a feature to save your financial data on our website. However, you can download or print the suggestions provided for future reference.</span>
+  </div>
+
 </div>

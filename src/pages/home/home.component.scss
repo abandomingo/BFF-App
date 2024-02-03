@@ -1,17 +1,34 @@
 @import '../../styles.scss';
 
-#Home-Container {
-  position: relative;
-  min-height: 100vh;
+.Banner {
+  @include FlexColumnCentered;
+  &__Title {
+    @include FlexColumnCentered;
+    @include FontH2;
+
+    &__Small {
+      @include FontSmall;
+    }
+
+    &__Large {
+      @include FontLarge;
+    }
+
+    &__Medium {
+      @include FontMedium;
+    }
+  }
 }
 
-#Content {
-  padding-bottom: 185px;
-}
 
-#Footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 185px;
+#FAQ {
+  @include FlexRowStart;
+
+  .FAQ__Title {
+    @include FlexColumn;
+  }
+
+  .FAQ__Info {
+    @include FlexColumn;
+  }
 }

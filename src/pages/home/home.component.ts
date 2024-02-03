@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Colors } from '../../constants/colors';
 
 @Component({
   selector: 'home',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  readonly colors = Colors;
 }

@@ -1,9 +1,0 @@
-@import '../../styles.scss';
-
-.Banner {
-  @include FlexColumnCentered;
-  &__Title {
-    @include FlexColumnCentered;
-    @include FontH2;
-  }
-}
