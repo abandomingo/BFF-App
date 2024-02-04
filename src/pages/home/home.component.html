@@ -4,17 +4,32 @@
   </div>
   <button-chip [buttonText]="'Start Here'"></button-chip>
 </div>
-<div id="Features" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.ACCENT2">
-  <div class="Banner__Title" [style.height]="'100px'">
+
+
+<div id="Features" >
+  <div id="Features__Title">
     Powerful Features for Financial Guidance
   </div>
+
+  <div id="Features__Cards">
+    <card icon="calculate" header="Financial Calculations" subHeader="Generate accurate financial suggestions based on user's income, debt, spending, and other relevant factors"></card>
+    <card icon="edit_note" header="Customizable Inputs" subHeader="Easily input and update your financial information to get personalized suggestions tailored to your specific situation"> </card>
+    <card icon="update" header="Real-Time Updates" subHeader="Receive instant updates and recommendations as you make changes to your financial inputs"> </card>
+    <card icon="sentiment_very_satisfied" header="User-Friendly Interface" subHeader="Enjoy a simple and intuitive interface that makes it easy to navigate and understand your financial suggestions"> </card>
+  </div>
+  
 </div>
+
+
+
 <div id="About" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.WHITE">
   <div class="Banner__Title" [style.height]="'100px'">
     Take Control of Your Finances
   </div>
 </div>
-<div id="FAQ" class="Banner" [style.height]="'500px'" [style.backgroundColor]="colors.ACCENT1">
+
+
+<div id="FAQ">
   <div class="FAQ__Title">
     <span class="FAQ__Title__Small">FAQ</span>
 

@@ -20,15 +20,78 @@
   }
 }
 
+#Features {
+  @include FlexColumn;
+  background-color: $accent2-color;
+  padding: 24px 200px;
+  gap: 24px;
+
+  &__Title {
+    @include FontH2;
+    text-align: center;
+  }
+  
+  &__Cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 24px;
+    padding: 24px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0 0;
+
+    &__Cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      display: grid;
+      gap: 24px;
+      padding: 24px;
+    }
+  }
+}
+
 
 #FAQ {
-  @include FlexRowStart;
+  background-color: $accent1-color;
+  @include FlexRow;
+  padding: 24px 24px;
+  gap: 24px;
 
   .FAQ__Title {
     @include FlexColumn;
+    align-items: flex-start;
+
+    &__Small {
+      @include FontSmall;
+    }
+    
+    &__Medium {
+      @include FontMedium;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    &__Large {
+      @include FontH1;
+      text-align: center;
+    }
   }
 
   .FAQ__Info {
     @include FlexColumn;
+    gap: 16px;
+
+    &__Question {      
+    font-size: 20px;
+    font-family: 'Cabin-Bold';
+    }
+
+    &__Answer {
+      @include FontMedium;
+    }
+
   }
+
 }

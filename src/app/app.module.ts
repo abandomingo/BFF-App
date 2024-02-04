@@ -9,7 +9,8 @@ import { ButtonComponent } from '../components/button/button.component';
 import { UrlNotFoundComponent } from '../pages/url-not-found/url-not-found.component';
 import { SurveyComponent } from '../pages/survey/survey.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterOutlet, provideRouter } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { CardComponent } from '../components/cards/card.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { RouterOutlet, provideRouter } from '@angular/router';
     ButtonComponent,
     UrlNotFoundComponent,
     SurveyComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
