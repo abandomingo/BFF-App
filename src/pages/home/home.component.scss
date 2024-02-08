@@ -20,6 +20,42 @@
   }
 }
 
+
+#Start {
+  @include FlexColumnCentered;
+  background-color: $white-color;
+  min-height: 500px;
+  gap: 16px;
+
+  &__Title {
+    @include FlexColumnCentered;
+    @include FontH2;
+  }
+
+  &__Sub {
+    @include FlexRow;
+    @include FontH3;
+  }
+  
+  &__Navigation {
+    @include FlexRow;
+    gap: 20px;
+
+    .Link {
+      @include FontLarge;
+      color: $black-color;
+      text-decoration: none;
+    
+      :hover {
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
 #Features {
   @include FlexColumn;
   background-color: $accent2-color;
@@ -91,7 +127,6 @@
     &__Answer {
       @include FontMedium;
     }
-
   }
 
 }
