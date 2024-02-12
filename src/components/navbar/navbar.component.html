@@ -1,5 +1,5 @@
 <div class="Navbar">
-  <div class="Navbar__Left">BFF</div>
+  <a class="Navbar__Left" routerLink="/home" >BFF</a> 
   <div class="Navbar__Mid">
     <a class="Link" rel="noopener" href="#Features">Features</a>
     <a class="Link" rel="noopener" href="#About">About</a>
@@ -7,6 +7,6 @@
     <a class="Link" href="https://github.com/abandomingo" target="_blank">Github</a>
   </div>
   <div class="Navbar__Right">
-    <button-chip id="Get-Started" [buttonText]="'Get Started'" (clickEvent)="onButtonClick()" ></button-chip>
+    <button-chip id="Get-Started" [buttonText]="'Get Started'" buttonRoute="/survey" (clickEvent)="onButtonClick()" ></button-chip>
   </div>
 </div>

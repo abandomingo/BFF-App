@@ -10,6 +10,8 @@
   &__Left {
     @include Logo;
     padding-left: 2rem;
+    color: $black-color;
+    text-decoration: none;
   }
 
   &__Mid {

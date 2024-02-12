@@ -11,6 +11,7 @@ import { SurveyComponent } from '../pages/survey/survey.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from '../components/cards/card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { CardComponent } from '../components/cards/card.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterOutlet,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

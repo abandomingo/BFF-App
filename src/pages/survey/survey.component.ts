@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-survey',
+  selector: 'survey',
   templateUrl: './survey.component.html',
-  styleUrl: './survey.component.scss'
+  styleUrl: './survey.component.scss',
 })
 export class SurveyComponent {
-
+  income = new FormControl('');
 }
