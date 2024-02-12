@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from '../components/cards/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SelectorComponent } from '../components/selector/selector.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ButtonComponent,
     UrlNotFoundComponent,
     SurveyComponent,
-    CardComponent
+    CardComponent,
+    SelectorComponent
   ],
   imports: [
     BrowserModule,

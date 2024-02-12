@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.Selector {
+  @include FlexColumnCentered;
+  gap: 24px;
+  width: 99vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  &__Title {
+    @include FontH1;
+  }
+
+  &__Option {
+    @include FlexRowCentered;
+    @include FontLarge;
+    border-radius: 12px;
+    min-width: 500px;
+    height: 100px;
+    background-color: $accent1-color;
+  }
+}
