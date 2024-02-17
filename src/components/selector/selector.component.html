@@ -1,14 +1,8 @@
-<div class="Selector">
+<div id="Option" class="Selector">
   <div class="Selector__Title">
     What would you like to plan today?
   </div>
-  <div class="Selector__Option">
-    Savings Calculator
-  </div>
-  <div class="Selector__Option">
-    Budget Calculator
-  </div>
-  <div class="Selector__Option">
-    Budget Sheet PDF
+  <div *ngFor="let option of options" class="Selector__Option" (mouseover)="onHover(option)" (mouseout)="onMouseOut(option)">
+    {{ option.content }}
   </div>
 </div>

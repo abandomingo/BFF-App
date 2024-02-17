@@ -16,7 +16,9 @@
     @include FontLarge;
     border-radius: 12px;
     min-width: 500px;
+    max-width: 1200px;
     height: 100px;
     background-color: $accent1-color;
+    padding: 0 24px;
   }
 }
