@@ -1,0 +1,51 @@
+<div class="Savings">
+
+  
+  <div class="Savings__Form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Initial Investment</mat-label>
+          <input matInput placeholder="$100">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Contribution Amount</mat-label>
+          <input matInput placeholder="$100">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field  appearance="outline">
+        <mat-label>Frequency</mat-label>
+          <mat-select>
+            <mat-option value="12">Monthly</mat-option>
+            <mat-option value="1">Yearly</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Years to Grow</mat-label>
+          <input matInput placeholder="25 Years">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>APY</mat-label>
+          <input matInput placeholder="3.00%">
+        </mat-form-field>
+      </div>
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+    </form>
+
+    <p>
+      
+    </p>
+
+
+  </div>
+  <div class="Savings__Graph"> 
+
+  </div>
+</div>

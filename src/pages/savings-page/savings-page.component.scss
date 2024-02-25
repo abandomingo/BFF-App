@@ -1,0 +1,25 @@
+@import '../../styles.scss';
+
+.Savings {
+  @include FlexRowCentered;
+  height: calc(99vh - 250px);
+  gap: 24px;
+
+  &__Form {
+    @include FlexColumnCentered; 
+    height: 600px;
+    width: 500px;
+
+    &__Label {
+      @include FontLarge;
+    }
+
+  }
+
+  &__Graph {
+    @include FlexColumnCentered;
+    height: 600px;
+    width: 500px;
+    background-color: $accent1-color;
+  }
+}

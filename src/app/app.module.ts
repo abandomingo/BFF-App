@@ -11,9 +11,14 @@ import { SurveyComponent } from '../pages/survey/survey.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from '../components/cards/card.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectorComponent } from '../components/selector/selector.component';
-
+import { SavingsPageComponent } from '../pages/savings-page/savings-page.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -25,14 +30,21 @@ import { SelectorComponent } from '../components/selector/selector.component';
     UrlNotFoundComponent,
     SurveyComponent,
     CardComponent,
-    SelectorComponent
+    SelectorComponent,
+    SavingsPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterOutlet,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
