@@ -14,26 +14,26 @@
 
 @mixin Logo {
   font-size: 28px;
-  font-family: 'Cabin-Bold';
+  font-family: 'Cabin-Bold', sans-serif;
 }
 
 @mixin FontLarge {
   font-size: 18px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   font-weight: 400;
 }
 
 // Medium Font
 @mixin FontMedium {
   font-size: 16px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   font-weight: 400;
 }
 
 // Small Font
 @mixin FontSmall {
   font-size: 12px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   font-weight: 400;
 }
 
@@ -43,18 +43,18 @@
 
 @mixin FontH1{
   font-size: 48px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
 }
 
 @mixin FontH2 {
   font-size: 35px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   font-weight: 600;
 }
 
 @mixin FontH3 {
   font-size: 20px;
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   font-weight: 600;
 }
 

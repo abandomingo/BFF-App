@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation, flipInXOnEnterAnimation, flipOutXOnLeaveAnimation } from 'angular-animations';
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation} from 'angular-animations';
 
 export interface Option {
   content: string;
@@ -15,8 +15,6 @@ export interface Option {
   animations: [
     fadeInOnEnterAnimation(),
     fadeOutOnLeaveAnimation(),
-    flipInXOnEnterAnimation(),
-    flipOutXOnLeaveAnimation(),
   ]
 })
 

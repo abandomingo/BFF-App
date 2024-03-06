@@ -43,15 +43,11 @@ body {
   overflow: hidden;
   overflow-y: scroll; /* Add the ability to scroll */
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */  }
+  scrollbar-width: none;  /* Firefox */
+}
 body::-webkit-scrollbar {
   display: none;
 }
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 
 /* Change the border color */
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
@@ -87,5 +83,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-form-field-label{
   color: $black-color !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: #000000 !important;
+  font-family: 'Cabin', sans-serif !important;
+}
+
+.mat-primary {
+  --mat-minimal-pseudo-checkbox-selected-checkmark-color: #161616 !important;
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
+  color: #000000 !important;
+  font-family: 'Cabin', sans-serif !important;
+}
+
+.mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+  font-family: 'Cabin', sans-serif !important;
+}
+
+.mdc-text-field--outlined .mdc-floating-label {
+  font-family: 'Cabin', sans-serif !important;
+}
+
+.mat-mdc-select {
+  font-family: 'Cabin', sans-serif !important;
 }
 

@@ -19,6 +19,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import { NgxMaskModule } from 'ngx-mask';
+import { NgxChartsModule }from '@swimlane/ngx-charts'; 
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatIconModule,
     MatInputModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatButtonModule,
+    NgxMaskModule.forRoot(),
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

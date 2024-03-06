@@ -4,22 +4,35 @@
   @include FlexRowCentered;
   height: calc(99vh - 250px);
   gap: 24px;
+  padding: 0 24px;
 
   &__Form {
-    @include FlexColumnCentered; 
-    height: 600px;
-    width: 500px;
+    @include FlexColumnCentered;
+    gap: 10px; 
+    min-height: 350px;
+    min-width: 300px;
+    padding: 24px;
+    border: 1px solid $black-color;
+    background-color: $secondary1-color;
+
+    &__Title {
+      @include FontH3;
+      padding-bottom: 12px
+    }
 
     &__Label {
       @include FontLarge;
+      background-color: $primary1-color;
     }
+    
 
+    &__Submit {
+      @include FontMedium;
+    }
   }
 
   &__Graph {
+    margin-top: 75px;
     @include FlexColumnCentered;
-    height: 600px;
-    width: 500px;
-    background-color: $accent1-color;
   }
 }
