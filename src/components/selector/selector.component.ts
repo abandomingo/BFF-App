@@ -1,5 +1,5 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Component } from '@angular/core';
-import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation} from 'angular-animations';
 
 export interface Option {
   content: string;
@@ -13,9 +13,22 @@ export interface Option {
   templateUrl: './selector.component.html',
   styleUrl: './selector.component.scss',
   animations: [
-    fadeInOnEnterAnimation(),
-    fadeOutOnLeaveAnimation(),
-  ]
+    trigger('slideInFromRight', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('300ms ease-out', style({ transform: 'translateX(0%)' })),
+      ]),
+    ]),
+    trigger('slideInFromRightOnHover', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('300ms ease-out', style({ transform: 'translateX(0%)' })),
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ transform: 'translateX(100%)' })),
+      ]),
+    ]),
+  ],
 })
 
 export class SelectorComponent {

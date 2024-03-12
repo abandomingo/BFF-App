@@ -49,6 +49,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.mat-button-small {
+  @include FontSmall;
+}
+
+.mat-button {
+  @include FontMedium;
+}
+
 /* Change the border color */
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
@@ -111,3 +119,23 @@ body::-webkit-scrollbar {
   font-family: 'Cabin', sans-serif !important;
 }
 
+.mdc-button.mat-success,
+  .mat-mdc-stroked-button.mat-success {
+    color: #35452B !important;
+  }
+  .mat-mdc-unelevated-button.mat-success:hover,
+  .mat-mdc-raised-button.mat-success:hover {
+    color: #f0fff3 !important;
+    background-color: #768350 !important;
+  }
+
+  .mat-mdc-unelevated-button:not(:disabled, :hover).mat-success,
+  .mat-mdc-raised-button.mat-success,
+  .mat-mdc-fab.mat-success,
+  .mat-mdc-mini-fab.mat-success {
+    color: #f0fff3 !important;
+    background-color: #35452B !important;
+  }
+  .mat-mdc-icon-button.mat-success {
+    color: #35452B !important; 
+  }

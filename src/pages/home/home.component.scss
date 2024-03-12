@@ -38,11 +38,11 @@
   }
   
   &__Navigation {
-    @include FlexRow;
+    @include FlexRowCentered;
     gap: 20px;
 
     .Link {
-      @include FontLarge;
+      @include FontMedium;
       color: $black-color;
       text-decoration: none;
     

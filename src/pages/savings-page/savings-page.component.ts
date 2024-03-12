@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 export interface SavingsData {
@@ -76,7 +76,6 @@ class SavingsCalculator {
   ],
 })
 export class SavingsPageComponent implements OnInit {
-  animation = true
   dataset =  [
     {
       "name": "Saved Money",
@@ -120,6 +119,8 @@ export class SavingsPageComponent implements OnInit {
     timeline: true,
   };
 
+  
+
   public savingsForm!: FormGroup;
 
   ngOnInit() {
@@ -130,6 +131,21 @@ export class SavingsPageComponent implements OnInit {
       time: new FormControl('', [Validators.required, Validators.pattern(/^\d+$/), Validators.min(0), Validators.max(50)]),
       apy: new FormControl('', [Validators.required, Validators.pattern(/^-?\d*\.?\d+$/)]),
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.adjustViewSize();
+  }
+
+  private adjustViewSize(): void {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 700) {
+      this.graphSettings.view = [screenWidth, 400]; 
+    } else {
+      this.graphSettings.view = [900, 600]; 
+    }
   }
 
   public submitForm() {

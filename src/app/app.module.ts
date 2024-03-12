@@ -5,7 +5,6 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { FooterComponent } from '../components/footer/footer.component'; 
 import { HomeComponent } from '../pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonComponent } from '../components/button/button.component';
 import { UrlNotFoundComponent } from '../pages/url-not-found/url-not-found.component';
 import { SurveyComponent } from '../pages/survey/survey.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +28,6 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    ButtonComponent,
     UrlNotFoundComponent,
     SurveyComponent,
     CardComponent,
