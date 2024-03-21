@@ -2,23 +2,33 @@
 
 .Selector {
   @include FlexColumnCentered;
+  height: 500px;
   gap: 24px;
-  width: 99vw;
-  height: 100vh;
-  overflow-x: hidden;
 
   &__Title {
     @include FontH1;
   }
 
-  &__Option {
-    @include FlexRowCentered;
-    @include FontLarge;
-    border-radius: 12px;
-    min-width: 500px;
-    max-width: 1200px;
-    height: 100px;
-    background-color: $accent1-color;
-    padding: 0;
+  &__List {
+    @include FlexRowSpacedBetween;
+    gap: 24px;
+    flex: wrap;
+
+    &__Option {
+      @include FlexRowCentered;
+      @include Logo;
+      border-radius: 12px;
+      width: 250px;
+      height: 250px;
+      background-color: $accent1-color;
+      padding: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    &__Option:hover {
+      @include FontLarge;
+    }
+    
   }
+ 
 }

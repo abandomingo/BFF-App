@@ -34,9 +34,9 @@ export interface Option {
 export class SelectorComponent {
 
   options: Option[] = [
-    { content: '', title: "Savings Calculator", desc: 'Savings Calculator - Reveal the future value of your efforts, find out how your money can grow! Use this simple calculator to estimate your interest over time.', route: '/savings' },
-    { content: '', title: "Budget Calculator", desc: 'Budget Calculator - Create a balanced budget based off your personal needs! Empower yourself to make informed decisions, ensuring your money aligns with your goals and aspirations ', route: '' },
-    { content: '', title: "Budget Maker PDF", desc: 'Budget Maker PDF - Download your desired budget in an easy-to-read format. Fill out your own desired budget or import from the Budget Calculator!', route: '' }
+    { content: '', title: "Savings Calculator", desc: 'Reveal the future value of your efforts, find out how your money can grow! Use this simple calculator to estimate your interest over time.', route: '/savings' },
+    { content: '', title: "Budget Calculator", desc: 'Create a balanced budget based off your personal needs! Empower yourself to make informed decisions, ensuring your money aligns with your goals and aspirations ', route: '/budget' },
+    { content: '', title: "Budget Maker PDF", desc: 'Download your desired budget in an easy-to-read format. Fill out your own desired budget or import from the Budget Calculator!', route: '' }
   ];
 
   constructor() {

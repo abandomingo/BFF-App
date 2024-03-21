@@ -2,7 +2,9 @@
   <div class="Selector__Title">
     What would you like to plan today?
   </div>
-  <div *ngFor="let option of options" class="Selector__Option" [@slideInFromRightOnHover]  (mouseover)="onHover(option)"(mouseout)="onMouseOut(option)" [routerLink]="option.route">
-    {{ option.content }}
+  <div class="Selector__List">
+    <div *ngFor="let option of options" class="Selector__List__Option" [@slideInFromRightOnHover]  (mouseover)="onHover(option)"(mouseout)="onMouseOut(option)" [routerLink]="option.route">
+      {{ option.content }}
+    </div>
   </div>
 </div>

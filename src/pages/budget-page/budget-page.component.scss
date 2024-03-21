@@ -1,0 +1,46 @@
+@import '../../styles.scss';
+
+.Budget {
+  @include FlexColumnCentered;
+  gap: 24px;
+  padding: 0 24px;
+
+  &__Title {
+    @include FlexRowCentered;
+    @include Logo;
+    padding: 12px 0;
+  }
+
+  &__FormGroup {
+    border: 1px solid $black-color;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+
+    &__Income {
+      @include FlexRowCentered;
+      gap: 12px;
+
+      &__Input {
+        @include FlexRowCentered;
+        @include FontLarge;
+        padding: 12px 0;
+      }
+
+    }
+  }
+
+  &__Analytics {
+    @include FlexRowStart ;
+    gap: 20px;
+
+    &__Left {
+      @include FlexColumn;
+
+      .Large {
+        @include Logo;
+        font-size: 48px;
+      }
+    }
+  }
+}
+

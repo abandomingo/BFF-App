@@ -139,3 +139,13 @@ body::-webkit-scrollbar {
   .mat-mdc-icon-button.mat-success {
     color: #35452B !important; 
   }
+
+  .mat-step-icon-selected {
+    background-color: $accent2-color !important;
+    color: #f0fff3 !important;
+  }
+
+  .mat-step-icon-state-done {
+    background-color: $accent2-color !important;
+    color: #f0fff3 !important;
+  }

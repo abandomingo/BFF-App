@@ -21,6 +21,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgxChartsModule }from '@swimlane/ngx-charts'; 
+import { BudgetPageComponent } from '../pages/budget-page/budget-page.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     SurveyComponent,
     CardComponent,
     SelectorComponent,
-    SavingsPageComponent
+    SavingsPageComponent,
+    BudgetPageComponent
   ],
   imports: [
     BrowserModule,
@@ -49,8 +55,15 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     MatButtonModule,
     NgxMaskModule.forRoot(),
     NgxChartsModule,
+    MatStepperModule,
+    MatProgressSpinnerModule,
   ],
-  providers: [],
+  providers: [
+    {
+    provide: STEPPER_GLOBAL_OPTIONS,
+    useValue: {displayDefaultIndicatorType: false},
+  },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
