@@ -119,15 +119,15 @@ body::-webkit-scrollbar {
   font-family: 'Cabin', sans-serif !important;
 }
 
-.mdc-button.mat-success,
-  .mat-mdc-stroked-button.mat-success {
-    color: #35452B !important;
-  }
-  .mat-mdc-unelevated-button.mat-success:hover,
-  .mat-mdc-raised-button.mat-success:hover {
-    color: #f0fff3 !important;
-    background-color: #768350 !important;
-  }
+  .mdc-button.mat-success,
+    .mat-mdc-stroked-button.mat-success {
+      color: #35452B !important;
+    }
+    .mat-mdc-unelevated-button.mat-success:hover,
+    .mat-mdc-raised-button.mat-success:hover {
+      color: #f0fff3 !important;
+      background-color: #768350 !important;
+    }
 
   .mat-mdc-unelevated-button:not(:disabled, :hover).mat-success,
   .mat-mdc-raised-button.mat-success,
@@ -149,3 +149,12 @@ body::-webkit-scrollbar {
     background-color: $accent2-color !important;
     color: #f0fff3 !important;
   }
+
+  .mat-mdc-tab-body-content {
+    overflow: hidden !important;
+  }
+
+  .advanced-pie-legend .legend-items-container .legend-items {
+    overflow: visible !important;
+  }
+

@@ -5,7 +5,7 @@
       <form [formGroup]="incomeForm"  class="Budget__FormGroup__Income">
         <div class="Budget__FormGroup__Income__Input">
           <mat-form-field appearance="outline">
-            <mat-label>After Tax Income</mat-label>
+            <mat-label>After Tax Monthly Income</mat-label>
             <input matInput placeholder="$1500" formControlName="incomeBudget" prefix="$ " mask="separator.2" thousandSeparator=",">
             <mat-error *ngIf="checkError( 'income',  'incomeBudget', 'required')">This field is required</mat-error>
             <mat-error *ngIf="checkError( 'income',  'incomeBudget', 'pattern')">Please enter a number</mat-error>
@@ -157,6 +157,13 @@
         </div>
         <div class="Budget__FormGroup__Income__Input">
           <mat-form-field appearance="outline">
+            <mat-label>Savings/401k/HYS/ROTH IRA</mat-label>
+            <input matInput placeholder="$100" formControlName="savingsBudget" prefix="$ " mask="separator.2" thousandSeparator=",">
+            <mat-error *ngIf="checkError('personal','savingsBudget', 'pattern')">Please enter a number</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="Budget__FormGroup__Income__Input">
+          <mat-form-field appearance="outline">
             <mat-label>Other</mat-label>
             <input matInput placeholder="$100" formControlName="otherBudget" prefix="$ " mask="separator.2" thousandSeparator=",">
             <mat-error *ngIf="checkError('personal','otherBudget', 'pattern')">Please enter a number</mat-error>
@@ -197,18 +204,47 @@
   </mat-stepper>
 </div>
 
-<div class="Budget__Analytics">
-
-  <div class="Budget__Analytics__Left">
-    <div class="Large"> Your Total Budget Breakdown 50/30/20 Rule</div>
-    <div class="Large">Neccessities {{ necessities }} </div>
-    <div class="Large">Wants {{ wants }} </div>
-    <div class="Large">Savings {{ savings }} </div>
+<div class="Budget__Analytics" [@slideInFromLeft] *ngIf="true">
+  <div class="Budget__Analytics__Title">Your Total Budget Breakdown</div>
+  <div class="Budget__Analytics__Content">
+    <mat-tab-group class="Budget__Analytics__Content__TabGroup" >
+      <mat-tab class="Budget__Analytics__Content__TabGroup__Tab" label="Ideal Budget"> 
+        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Suggested Budget Based off your Income</div>
+        <ngx-charts-pie-chart
+        [view]="pieSettings.view"
+        [results]="idealDataset"
+        [gradient]="pieSettings.gradient"
+        [legend]="pieSettings.showLegend"
+        [labels]="pieSettings.showLabels"
+        [doughnut]="pieSettings.isDoughnut"
+        [legendPosition]="pieSettings.legendPosition">
+        </ngx-charts-pie-chart>
+      </mat-tab>
+      <mat-tab class="Budget__Analytics__Content__TabGroup__Tab" label="Your Budget">
+        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Your Current Budget Now</div>
+        <ngx-charts-pie-chart
+        [view]="pieSettings.view"
+        [results]="userDataset"
+        [gradient]="pieSettings.gradient"
+        [legend]="pieSettings.showLegend"
+        [labels]="pieSettings.showLabels"
+        [doughnut]="pieSettings.isDoughnut"
+        [legendPosition]="pieSettings.legendPosition">
+        </ngx-charts-pie-chart>
+      </mat-tab>
+      <mat-tab class="Budget__Analytics__Content__TabGroup__Tab" label="Category Breakdown" > 
+        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Category Breakdown</div>
+        <ngx-charts-advanced-pie-chart
+        [view]="pieSettings.view"
+        [results]="userDataset"
+        [gradient]="pieSettings.gradient">
+        </ngx-charts-advanced-pie-chart>
+        <ngx-charts-pie-grid class="Budget__Analytics__Content__TabGroup__Tab__Chart"
+        [view]="pieSettings.view"
+        [results]="userCategoryDataset">
+      </ngx-charts-pie-grid>
+      </mat-tab>
+    </mat-tab-group>
   </div>
-
-  <div class="Budget__Analytics__Right">
-    <div class="Large">Neccessities {{ necessities }} </div>
-    <div class="Large">Wants {{ wants }} </div>
-    <div class="Large">Savings {{ savings }} </div>
-  </div>
+  
 </div>

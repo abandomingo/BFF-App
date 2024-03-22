@@ -24,7 +24,7 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { BudgetPageComponent } from '../pages/budget-page/budget-page.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
-
+import {MatTabsModule} from '@angular/material/tabs';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
@@ -57,6 +57,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     NgxChartsModule,
     MatStepperModule,
     MatProgressSpinnerModule,
+    MatTabsModule,
   ],
   providers: [
     {
