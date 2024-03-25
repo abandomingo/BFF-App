@@ -2,8 +2,8 @@
 
 .Selector {
   @include FlexColumnCentered;
-  height: 500px;
   gap: 24px;
+  padding: 24px;
 
   &__Title {
     @include FontH1;
@@ -27,8 +27,15 @@
 
     &__Option:hover {
       @include FontLarge;
+      background-color: #ae936e;
     }
     
   }
- 
+
+  @media only screen and (max-width: 600px) {
+    
+    &__List {
+      @include FlexColumnCentered;
+    }
+  }
 }

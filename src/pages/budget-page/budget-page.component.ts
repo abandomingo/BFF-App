@@ -65,10 +65,6 @@ export class BudgetPageComponent implements OnInit {
     },
   ];
 
-  colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
-  };
-
   pieSettings: PieSettings = {
     view: [700, 500],
     gradient: true,
@@ -135,6 +131,11 @@ export class BudgetPageComponent implements OnInit {
   
 
   public submitBudget() {
+    if(this.incomeForm.value <= 0){
+      console.log("CANNOT BE 0 INCOME")
+      return;
+    }
+
     if(this.incomeForm && this.incomeForm.valid){
       this.canSeeGraph = true;
       const incomeData = this.incomeForm.value;

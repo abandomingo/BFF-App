@@ -204,12 +204,12 @@
   </mat-stepper>
 </div>
 
-<div class="Budget__Analytics" [@slideInFromLeft] *ngIf="true">
+<div class="Budget__Analytics" [@slideInFromLeft] *ngIf="canSeeGraph">
   <div class="Budget__Analytics__Title">Your Total Budget Breakdown</div>
   <div class="Budget__Analytics__Content">
     <mat-tab-group class="Budget__Analytics__Content__TabGroup" >
       <mat-tab class="Budget__Analytics__Content__TabGroup__Tab" label="Ideal Budget"> 
-        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Your Budget categorized by the 50/30/20 Rule</div>
+        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Your Budget on the 50/30/20 Rule</div>
         <ngx-charts-pie-chart
         [view]="pieSettings.view"
         [results]="idealDataset"
@@ -245,6 +245,9 @@
       </ngx-charts-pie-grid>
       </mat-tab>
     </mat-tab-group>
-  </div>
-  
+  </div>  
+</div>
+
+<div class="Budget__GraphPlaceholder" [@slideInFromLeft] *ngIf="!canSeeGraph">
+  Please fill out the form above to see your Finance Graphics
 </div>

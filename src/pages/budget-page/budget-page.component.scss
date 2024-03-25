@@ -67,5 +67,11 @@
       }
     }
   }
+
+  &__GraphPlaceholder {
+    @include FlexColumnCentered;
+    font-family: 'Cabin', sans-serif;
+    padding-top: 48px;
+  }
 }
 
