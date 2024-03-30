@@ -1,6 +1,6 @@
 <div class="Budget" [@slideInFromRight]>
   <div class="Budget__Title"> Calculate your Monthly Budget </div>
-  <mat-stepper class="Budget__FormGroup" linear="true">
+  <mat-stepper class="Budget__FormGroup" linear="true" [orientation]="isVertical">
     <mat-step [stepControl]="incomeForm" label="Income" state="income">
       <form [formGroup]="incomeForm"  class="Budget__FormGroup__Income">
         <div class="Budget__FormGroup__Income__Input">
@@ -204,12 +204,12 @@
   </mat-stepper>
 </div>
 
-<div class="Budget__Analytics" [@slideInFromLeft] *ngIf="canSeeGraph">
+<div class="Budget__Analytics" [@slideInFromLeft] dynamicHeight="true" *ngIf="canSeeGraph">
   <div class="Budget__Analytics__Title">Your Total Budget Breakdown</div>
   <div class="Budget__Analytics__Content">
     <mat-tab-group class="Budget__Analytics__Content__TabGroup" >
       <mat-tab class="Budget__Analytics__Content__TabGroup__Tab" label="Ideal Budget"> 
-        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">Your Budget on the 50/30/20 Rule</div>
+        <div class="Budget__Analytics__Content__TabGroup__Tab__Title">50/30/20 Rule</div>
         <ngx-charts-pie-chart
         [view]="pieSettings.view"
         [results]="idealDataset"

@@ -131,10 +131,12 @@ export class SavingsPageComponent implements OnInit {
       time: new FormControl('', [Validators.required, Validators.pattern(/^\d+$/), Validators.min(0), Validators.max(50)]),
       apy: new FormControl('', [Validators.required, Validators.pattern(/^-?\d*\.?\d+$/)]),
     });
+    this.onResize();
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
+  onResize(): void {
+    console.log("resize")
     this.adjustViewSize();
   }
 
@@ -142,9 +144,7 @@ export class SavingsPageComponent implements OnInit {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 700) {
-      this.graphSettings.view = [screenWidth, 400]; 
-    } else {
-      this.graphSettings.view = [900, 600]; 
+      this.graphSettings.view = [screenWidth, screenWidth * 2/3]; 
     }
   }
 

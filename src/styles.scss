@@ -158,3 +158,6 @@ body::-webkit-scrollbar {
     overflow: visible !important;
   }
 
+  .mat-mdc-tab-labels {
+    flex-flow: wrap !important;
+}

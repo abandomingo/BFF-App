@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { StepperOrientation } from '@angular/cdk/stepper';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { LegendPosition } from '@swimlane/ngx-charts';
 
@@ -43,6 +44,7 @@ export class BudgetPageComponent implements OnInit {
   public personalForm!: FormGroup;
 
   public canSeeGraph: boolean = false;
+  public isVertical: StepperOrientation = 'horizontal'
 
   idealDataset = [
     {
@@ -110,6 +112,13 @@ export class BudgetPageComponent implements OnInit {
       savingsBudget: new FormControl('', [Validators.pattern(/^-?\d*\.?\d+$/)]),
       otherBudget: new FormControl('', [Validators.pattern(/^-?\d*\.?\d+$/)]),
     });
+
+    this.onResize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(): void {
+    this.adjustViewSize();
   }
 
   public checkError = (formName: string, controlName: string, errorName: string) => {
@@ -271,6 +280,18 @@ export class BudgetPageComponent implements OnInit {
 
       this.userCategoryDataset = dataset
 
+    }
+  }
+
+  private adjustViewSize(): void {
+    const screenWidth = window.innerWidth;
+
+    if(screenWidth <= 1000) {
+      this.isVertical = 'vertical'
+    }
+
+    if (screenWidth < 800) {
+      this.pieSettings.view = [screenWidth, screenWidth * 5/7]; 
     }
   }
 }

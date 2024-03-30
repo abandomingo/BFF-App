@@ -59,7 +59,7 @@
 #Features {
   @include FlexColumn;
   background-color: $accent2-color;
-  padding: 24px 200px;
+  padding: 48px 200px;
   gap: 24px;
 
   &__Title {
@@ -69,20 +69,15 @@
   }
   
   &__Cards {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    @include FlexRow;
     gap: 24px;
     padding: 24px;
   }
 
   @media (max-width: 900px) {
     padding: 0 0;
-
     &__Cards {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      display: grid;
+      @include FlexColumn;
       gap: 24px;
       padding: 24px;
     }
@@ -122,7 +117,7 @@
 
     &__Question {      
     font-size: 20px;
-    font-family: 'Cabin-Bold';
+    font-family: 'Cabin-Bold', sans-serif;
     }
 
     &__Answer {
@@ -142,7 +137,7 @@
 
       &__Question {      
       font-size: 20px;
-      font-family: 'Cabin-Bold';
+      font-family: 'Cabin-Bold', sans-serif;
       }
 
       &__Answer {
