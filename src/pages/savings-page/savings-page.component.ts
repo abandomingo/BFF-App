@@ -136,7 +136,6 @@ export class SavingsPageComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(): void {
-    console.log("resize")
     this.adjustViewSize();
   }
 

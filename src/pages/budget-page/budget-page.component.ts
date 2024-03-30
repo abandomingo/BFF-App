@@ -141,8 +141,7 @@ export class BudgetPageComponent implements OnInit {
 
   public submitBudget() {
     if(this.incomeForm.value <= 0){
-      console.log("CANNOT BE 0 INCOME")
-      return;
+      this.incomeForm.markAsTouched();
     }
 
     if(this.incomeForm && this.incomeForm.valid){
