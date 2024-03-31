@@ -1,9 +1,0 @@
-export enum Colors {
-  PRIMARY1 = '#35452B',
-  PRIMARY2= '#727D6B',
-  SECONDARY = '#E9E7DE',
-  ACCENT1 = '#C7B090',
-  ACCENT2 = '#768350',
-  BLACK = '#1E2203',
-  WHITE = '#FBF9EF'
-} 
